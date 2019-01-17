@@ -1,0 +1,9 @@
+.navBody{
+    background: linear-gradient(#e0e2a4, #fefff6);
+    height: 80px;
+    overflow: hidden;
+}
+.item{
+    display: inline-block;
+    padding: 15px 15px ;
+}

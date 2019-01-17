@@ -1,0 +1,9 @@
+.headerBody{
+    background: linear-gradient(#246676,#4bd8f6);
+    height: 150px;
+    overflow: hidden;
+}
+
+.logo{
+    padding-left: 20%;
+}
