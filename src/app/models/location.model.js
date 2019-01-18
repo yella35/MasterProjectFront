@@ -1,5 +1,5 @@
 export interface LocationObject{
-    type:string;
+    locationType:[{nom:string}];
     nom: string;
     adresse: {
         ville: string;
