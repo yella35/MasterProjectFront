@@ -1,0 +1,30 @@
+<!-- <div class = "item">
+<div class="poster">
+  <img  [src]="poster" >
+</div>
+<div class="location_infos">
+  <div class="text">
+    <h4 class="titled">{{location.nom}}</h4>
+    <h4 class ="adress" *ngIf="location.adresse && !!location.adresse.ville">{{location.locationType[0].nom}} à {{location.adresse.ville}} - {{location.adresse.codePostal}}</h4>
+  </div>
+  <div class="price">
+    <div class ="priceText">La nuitée à partir de</div>
+    <button class="priceButton">Réserver</button>
+  </div>
+</div>
+</div> -->
+<div class="poster">
+  <img  [src]="poster" >
+</div>
+<div class="loc_infos">
+  <div class="text">
+    <h3 class="titled">
+      <span   class="loc-name">{{location.nom}}</span>
+    </h3>
+    <h3 class ="address" *ngIf="location.adresse && !!location.adresse.ville">{{location.locationType[0].nom}} à {{location.adresse.ville}}</h3>
+    <div class="price">
+      <div class ="priceText">La nuitée à partir de {{minPrice()}}€</div>
+      <button class="priceButton">Réserver</button>
+    </div>
+  </div>
+</div>
