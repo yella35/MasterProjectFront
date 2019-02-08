@@ -22,4 +22,5 @@ export class LocationItemComponent implements OnInit {
       return min;
   }
 
+
 }

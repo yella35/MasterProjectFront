@@ -1,5 +1,9 @@
-.navBody{
+:host {
     background: linear-gradient(#e0e2a4, #fefff6);
+}
+.navBody{
+    width: 73.75rem;
+    margin: 0 auto;
     height: 80px;
     overflow: hidden;
 }

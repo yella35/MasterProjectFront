@@ -1,0 +1,32 @@
+:host{
+    display: flex;
+    position: relative;
+    padding: 1.25em 0;
+    width: 73.75rem;
+    margin: 0 auto;
+}
+.loc {
+    padding-top:2rem;
+    font-size : 1.4rem;
+}
+.loc-overview{
+    width: 100%;
+    font-size : 1.4rem;
+}
+
+.loc-images{
+    padding-top:2rem;
+}
+
+.loc-detail {
+    width: 100%;
+    padding-top:2rem;
+}
+.rent{
+    width: 24rem;
+    margin: 0 auto;
+    padding-top:2rem;
+    font-size : 1.4rem;
+}
+
+

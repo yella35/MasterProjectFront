@@ -1,7 +1,7 @@
 <div class="location_list">
     <div *ngFor="let location of locations">
-        <div class="location_container">
-            <app-location-item [location]="location"></app-location-item>
+        <div (click)="redirect(location._id)" class="location_container">
+            <app-location-item    [location]="location"></app-location-item>
         </div>
     </div>
 </div>

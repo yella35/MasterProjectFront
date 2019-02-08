@@ -19,4 +19,9 @@ export class LocationService {
             url += `&limit=${this.limit}`;
         return this.http.get(url);
     }
+
+    getLocation(id: string){
+        let url = `${this.BASE_URL}detail/${id}`;
+        return this.http.get(url);
+    }
 }

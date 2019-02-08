@@ -1,33 +1,11 @@
-/**img{
-    width : 100%;
-}
 
-h4{
-    margin: 1px;
-}
-
-.price{
-    background-color: #4f9e00;
-    display: flex;
-    position:relative;
-    height:50px;
-}
-
-.priceButton{
-    float : right;
-    position:absolute;
-    top: 10px;
-    right: 10px;
-}
-
-**/
 :host {
     position: relative;
     width: 100%;
     height: 100%;
     display: block;
-    background-color: honeydew;
-    border:1px solid black;
+    background-color: #fcffda;
+    cursor:pointer;
 }
 
 :host:hover{
@@ -69,7 +47,7 @@ input {
 
 .loc_infos .titled {
     font-size: 1.2em;
-    color: #384a50;
+    color: #3a485f;
     font-weight: 600;
     margin: 0;
     width: 100%;
@@ -83,7 +61,7 @@ input {
 
 .loc_infos .address {
     font-size: 1em;
-    color: #131a1f;
+    color: #3a485f;
     font-weight: 600;
     margin: 0;
     width: 100%;
@@ -95,7 +73,7 @@ input {
 
 .loc_infos .date {
     font-weight: 500;
-    color: #384a50;
+    color: #3a485f;
     margin: 0;
     font-style: italic;
     font-size: 0.8em;
@@ -142,7 +120,7 @@ input {
 .loc_infos i.fa-cog ul li a {
     font-family: 'Sintony', sans-serif;
     font-size: 0.9em;
-    color: #384a50;
+    color: #3a485f;
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -164,9 +142,14 @@ input {
     margin: 0 auto;
 }
 
+.price{
+    background-color: #7aa62e;
+    width: 100%;
+}
+
 .priceText{
     font-size: 0.8em;
-    color: #2a6842;
+    color: #fcffda;
     font-weight: 600;
     margin: 0;
     width: 100%;

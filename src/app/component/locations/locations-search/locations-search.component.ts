@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {LocationService} from '../../../service/location/location.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-locations-search',
@@ -14,7 +15,8 @@ export class LocationsSearchComponent implements OnInit {
     start = 0;
 
     constructor(private route: ActivatedRoute,
-                private locationService: LocationService) {
+                private locationService: LocationService,
+                private router : Router) {
     }
 
     ngOnInit() {
@@ -24,6 +26,10 @@ export class LocationsSearchComponent implements OnInit {
         this.locationService.getLocations(this.idType, this.start).subscribe(res => {
             this.locations = res.locations;
         });
+    }
+
+    redirect(id){
+        this.router.navigate(['location/' + id]);
     }
 
 }

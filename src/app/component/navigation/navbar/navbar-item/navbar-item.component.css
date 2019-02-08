@@ -1,5 +1,6 @@
 .itemBody{
     color: #211cff;
+    cursor:pointer;
 }
 
 .itemBody:hover{

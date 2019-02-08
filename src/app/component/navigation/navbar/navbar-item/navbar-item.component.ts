@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-navbar-item',
@@ -7,13 +8,17 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class NavbarItemComponent implements OnInit {
 
-    @Input() title: String;
+    @Input() item;
 
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
+    }
+
+    redirect(){
+        this.router.navigate(['locations/' + this.item._id]);
     }
 
 }
