@@ -1,6 +1,7 @@
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -17,6 +18,13 @@ import {LocationDetailedComponent} from './component/locations/location-detailed
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { FooterComponent } from './component/navigation/footer/footer.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { EquipementItemComponent } from './component/locations/equipement-item/equipement-item.component';
+import { AuthComponent } from './component/auth/auth.component';
+
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -30,15 +38,23 @@ import { FooterComponent } from './component/navigation/footer/footer.component'
         BookingCalendarComponent,
         WelcomeComponent,
         LocationDetailedComponent,
-        FooterComponent
+        FooterComponent,
+        EquipementItemComponent,
+        AuthComponent
+
     ],
     imports: [
         BrowserAnimationsModule,
         AppRoutingModule,
         HttpClientModule, MatButtonModule, MatCheckboxModule,
-        NgxGalleryModule
+        NgxGalleryModule,
+        AngularFontAwesomeModule,
+        MDBBootstrapModule.forRoot(),
+        MatButtonModule,
+        FormsModule,
+        BrowserModule
     ],
-    providers: [],
+    providers: [CookieService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

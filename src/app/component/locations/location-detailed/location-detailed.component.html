@@ -1,14 +1,17 @@
 <div class="loc">
 <div class="loc-overview" *ngIf="location">
-    <div class="titre">{{location.nom}}</div>
-    <div *ngIf="location.description" class="description">{{location.description}}</div>
-    <div *ngIf="location.adresse" class="address">
-        <span class="fas fa-map-marker-alt">{{location.adresse.ville}} ({{location.adresse.codePostal}})</span></div>
+<div class="titre">{{location.nom}}</div>
+      <div *ngIf="location.description" class="description">{{location.description}}</div>
+  <div *ngIf="location.adresse" class="address">
+      <span class="fas fa-map-marker-alt">{{location.adresse.ville}} ({{location.adresse.codePostal}})</span></div>
 </div>
-    <div class="loc-images">
-        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
-    </div>
-    <div class="loc-detail"><p class="subtitle fancy"><span>À propos de cet hébergement : </span></p></div>
+  <div class="loc-images">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+  </div>
+  <div class="loc-detail"><p class="subtitle fancy"><span>À propos de cet hébergement :</span></p></div>
+   <div class="loc-equipements" *ngIf="equipements">
+     <div *ngFor="let equipement of equipements" class="equipement"><app-equipement-item [equipement]="equipement"></app-equipement-item></div>
+ </div>
 
 </div>
 <div class="rent">

@@ -1,0 +1,35 @@
+
+        <form class="formular" name="form" #f="ngForm" novalidate>
+            <div class="input_container animated fadeInUp">
+                <div class="form-group inputs">
+                    <label for="username">Adresse email</label>
+                    <input type="email"
+                           class="input_form"
+                           id="username"
+                           name="username"
+                           (keyup.enter)="login()"
+                           [(ngModel)]="model.username"
+                           #username="ngModel"
+                           required/>
+                </div>
+                <div class="form-group inputs">
+                    <label for="password">Mot de passe</label>
+                    <input type="password"
+                           class="input_form"
+                           id="password"
+                           name="password"
+                           (keyup.enter)="login()"
+                           [(ngModel)]="model.password"
+                           #password="ngModel"
+                           required/>
+                </div>
+            </div>
+
+            <div class="btn_container animated fadeInUp">
+                <div class="form-group centered">
+                    <button (click)="login()"mat-button>Connexion</button>
+
+                </div>
+            </div>
+        </form>
+

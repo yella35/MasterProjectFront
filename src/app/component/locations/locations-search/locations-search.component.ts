@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
     templateUrl: './locations-search.component.html',
     styleUrls: ['./locations-search.component.css']
 })
-export class LocationsSearchComponent implements OnInit {
+export class LocationsSearchComponent implements OnInit{
 
     idType: string;
     locations
@@ -22,11 +22,13 @@ export class LocationsSearchComponent implements OnInit {
     ngOnInit() {
         this.route.params.subscribe(params => {
             this.idType = params['id'];
+            this.locationService.getLocations(this.idType, this.start).subscribe(res => {
+                this.locations = res['locations'];
+            });
         });
-        this.locationService.getLocations(this.idType, this.start).subscribe(res => {
-            this.locations = res.locations;
-        });
+
     }
+
 
     redirect(id){
         this.router.navigate(['location/' + id]);

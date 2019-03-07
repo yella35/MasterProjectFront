@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LocationtypeService} from '../../../service/location/locationtype.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -10,17 +11,25 @@ import {LocationtypeService} from '../../../service/location/locationtype.servic
 export class NavbarComponent implements OnInit {
     items = [];
 
-    constructor(private locationtype: LocationtypeService) {
+    constructor(private locationtype: LocationtypeService,
+                private router: Router) {
     }
 
     ngOnInit() {
 
         this.locationtype.getTypes().subscribe(res => {
-            console.log(res);
-            for (let types of res.locationtypes) {
+            for (let types of res['locationtypes']) {
                 this.items.push(types);
             }
         });
+    }
+
+    redirect(item){
+        this.router.navigate(['locations/' + item._id]);
+    }
+
+    login(){
+        this.router.navigate(['login/']);
     }
 
 }

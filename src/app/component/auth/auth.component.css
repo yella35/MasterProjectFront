@@ -1,0 +1,247 @@
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: white;
+    overflow: hidden;
+}
+
+.log_container {
+    margin: auto;
+}
+
+.login_form {
+    position: relative;
+    float: left;
+    display: block;
+}
+
+form {
+    width: 100%;
+    float: left;
+    background-color: #211cff;
+}
+
+.input_container {
+    min-width: 380px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    animation-delay: 100ms;
+}
+
+.form-group {
+    position: relative;
+    margin: 5px 15px;
+}
+
+.form-group.inputs {
+    background: #ffffff26;
+    border: 1px solid #ffffff52;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.btn-link {
+    text-align: center;
+    padding: 10px !important;
+}
+
+.btn-link.password {
+    position: absolute;
+    right: 0;
+    width: auto;
+    text-align: right;
+    top: -6px;
+    font-size: 9px;
+}
+
+.form-group.centered {
+    text-align: center;
+}
+
+button {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+h3 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    top: -3em;
+    font-variant-caps: all-small-caps;
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 0.8em;
+}
+
+input {
+    border-radius: 0px;
+    outline: none;
+}
+
+.goHome {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: left 300ms ease-out;
+}
+
+.goHome > i {
+    padding-right: 10px;
+    transition: transform 300ms ease-out;
+}
+
+.goHome:hover {
+    left: 30px;
+    transition: left 300ms ease-out;
+}
+
+.goHome:hover > i {
+    transform: rotateZ(360deg);
+    transition: transform 300ms ease-out;
+}
+
+.input_form {
+    border-radius: 0px;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    border-bottom: 1px solid rgba(30, 30, 30, 0.2);
+    display: block;
+    width: 100%;
+    height: 20px;
+    color: #ffffff;
+    padding: 0 !important;
+    margin: 2px;
+}
+
+.btn_container {
+    animation-delay: 500ms;
+}
+
+label {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+}
+
+a.default {
+    text-decoration: none;
+    color: #333;
+    font-size: 10px;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+}
+
+/**
+  Responsivité
+ */
+@media screen and (max-width: 768px) {
+    h3 {
+        top: 0px;
+        color: #333;
+    }
+
+    :host {
+        padding: 50px;
+    }
+
+    .register_form,
+    .login_form {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .input_container {
+        padding: 50px 20px;
+    }
+
+    .btn_container {
+        padding: 0 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+h4 {
+    position: absolute;
+    left: calc(50% - 62px);
+    overflow: hidden;
+    border-radius: 50%;
+    top: -60px;
+    width: 120px;
+    height: 120px;
+    padding: 0 !important;
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(50, 50, 50, 0.35);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(50, 50, 50, 0.35);
+    box-shadow: 0px 0px 20px 1px rgba(50, 50, 50, 0.35);
+}
+
+.login_form.register_formular,
+.register_form {
+    width: 500px;
+}
+
+.form-group.register {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.form-group.register > button {
+    width: 100%;
+}
+
+
+input {
+    padding: 10px 5px;
+    margin: 10px 0px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Sintony', sans-serif;
+    color: darkgrey;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'Sintony', sans-serif;
+    color: darkgrey;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'Sintony', sans-serif;
+    color: pink;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Sintony', sans-serif;
+    color: pink;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+}

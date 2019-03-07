@@ -1,5 +1,33 @@
-<div class="navBody">
+<!--<div class="navBody">
 <div class="item" *ngFor="let item of items">
     <app-navbar-item [item]="item"></app-navbar-item>
 </div>
 </div>
+-->
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul *ngFor="let item of items" class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a (click)="redirect(item)" class="nav-link waves-light" mdbWavesEffect>{{item.nom}}<span class="sr-only"></span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto"><li class="nav-item">
+            <a (click)="login()" class="nav-link waves-light" mdbWavesEffect>Connexion<span class="sr-only"></span></a>
+        </li></ul>
+        <!-- Links -->
+
+        <!-- Search form -->
+        <form class="form-inline waves-light" mdbWavesEffect>
+            <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </div>
+        </form>
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
